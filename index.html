@@ -1,0 +1,341 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Results summary component</title>
+  
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+
+      body {
+            height: 100%;
+            display: flex;
+            
+            align-items: center;
+            justify-content: center;
+    } 
+      
+      .gen {
+        display: flex;
+        columns: 2;
+        column-gap: 0px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(250, 250, 250);
+        height: 343px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }
+
+      .card1{
+            flex: 1;
+            width: 190px;
+            height: 300px;
+            color: white;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(78, 78, 235);
+        }
+        .card1 h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: rgb(223, 217, 217);
+        }    
+        
+        .score {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(32, 9, 165);
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .score h1 {
+            font-size: 40px;
+            margin: 0;
+            margin: 0;
+            padding-top: 3px;
+        }
+        .score h3 {
+            font-size: 17px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 5px;
+            padding: 0;
+            color: rgb(223, 217, 217);
+        }
+        .text {
+            margin-top: 30px;
+        }
+        .text h4 {
+            margin: 0;
+            padding: 0;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .text p {
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+            color: rgb(223, 217, 217);
+        }
+
+        .card2{
+            width: 200px;
+            height: 300px;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card2 h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: rgb(10, 10, 10);
+        }
+
+        .reaction {
+            width: 150px;
+            display: inline-flex;
+            height: 10px;
+            border-radius: 5%;
+            background-color: rgb(240, 201, 201);
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            justify-content: flex-start;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .reaction h2 {
+            font-size: 15px;
+            margin: 0;
+            margin: 0;
+            padding-top: 3px;
+            color: rgb(121, 4, 4);
+        }
+
+        .reaction h3 {
+            font-size: 17px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 5px;
+            margin-left: 30px;
+            padding: 0;
+            justify-self: center;
+            color: rgb(10, 10, 10);
+        }
+
+        .reaction h4 {
+            font-size: 17px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: -19px;
+            margin-left: 55px;
+            padding: 0;
+            justify-self: flex-end;
+            color: rgb(129, 128, 128);
+        }
+
+        .memory {
+            width: 150px;
+            display: inline-flex;
+            height: 10px;
+            border-radius: 5%;
+            background-color: rgb(253, 234, 197);
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            justify-content: flex-start;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .memory h2 {
+            font-size: 15px;
+            margin: 0;
+            margin: 0;
+            padding-top: 3px;
+            color: rgb(240, 144, 35);
+        }
+
+        .memory h3 {
+            font-size: 17px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 5px;
+            margin-left: 30px;
+            padding: 0;
+            justify-self: center;
+            color: rgb(10, 10, 10);
+        }
+
+        .memory h4 {
+            font-size: 17px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: -19px;
+            margin-left: 55px;
+            padding: 0;
+            justify-self: flex-end;
+            color: rgb(129, 128, 128);
+        }
+
+        .verbal {
+            width: 150px;
+            display: inline-flex;
+            height: 10px;
+            border-radius: 5%;
+            background-color: rgb(233, 243, 233);
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            justify-content: flex-start;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .verbal h2 {
+            font-size: 15px;
+            margin: 0;
+            margin: 0;
+            padding-top: 3px;
+            color: rgb(27, 182, 7);
+        }
+
+        .verbal h3 {
+            font-size: 17px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 5px;
+            margin-left: 30px;
+            padding: 0;
+            justify-self: center;
+            color: rgb(10, 10, 10);
+        }
+
+        .verbal h4 {
+            font-size: 17px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: -19px;
+            margin-left: 55px;
+            padding: 0;
+            justify-self: flex-end;
+            color: rgb(129, 128, 128);
+        }
+
+        .visual {
+            width: 150px;
+            display: inline-flex;
+            height: 10px;
+            border-radius: 5%;
+            background-color: rgb(225, 229, 248);
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            justify-content: flex-start;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .visual h2 {
+            font-size: 15px;
+            margin: 0;
+            margin: 0;
+            padding-top: 3px;
+            color: rgb(4, 6, 121);
+        }
+
+        .visual h3 {
+            font-size: 17px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 5px;
+            margin-left: 30px;
+            padding: 0;
+            justify-self: center;
+            color: rgb(10, 10, 10);
+        }
+
+        .visual h4 {
+            font-size: 17px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: -19px;
+            margin-left: 55px;
+            padding: 0;
+            justify-self: flex-end;
+            color: rgb(129, 128, 128);
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <section class="gen">
+        <div class="card1">
+            <h2>Your Result</h2>
+            <div class="score">
+                <h1>76</h1>
+                <h3>of 100</h3>
+            </div>
+            <div class="text">
+                <h4>Great</h4>
+                <p>You scored higher than 65% of the people who have taken these tests.</p>
+            </div>
+        </div>
+
+        <div class="card2">
+            <h1>Summary</h1>
+            <div class="reaction">
+                <h2>Reaction</h2>
+                <div>
+                    <h3>80</h3>
+                    <h4>/100</h4>
+                </div>
+            </div>
+            <div class="memory">
+                <h2>Memory</h2>
+                <div>
+                    <h3>92</h3>
+                    <h4>/100</h4>
+                </div>
+            </div>
+            <div class="verbal">
+                <h2>Verbal</h2>
+                <div>
+                    <h3>61</h3>
+                    <h4>/100</h4>
+                </div>
+            </div>
+            <div class="visual">
+                <h2>Visual</h2>
+                <div>
+                    <h3>72</h3>
+                    <h4>/100</h4>
+                </div>
+            </div>
+            <button>Continue</button>
+        </div>
+    </section>
+  </body>
+  </html>

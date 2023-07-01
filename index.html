@@ -1,7 +1,10 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
     
     <title>Frontend Mentor | Results summary component</title>
@@ -14,7 +17,7 @@
       body {
             height: 100%;
             display: flex;
-            
+            font-family: "Hanken Grotesk", sans-serif;
             align-items: center;
             justify-content: center;
     } 
@@ -41,7 +44,7 @@
             margin: 0 auto;
             padding: 20px;
             text-align: center;
-            background-color: rgb(65, 65, 209);
+            background-color: #6743ff 
         }
         .card1 h2 {
             margin: 0;
@@ -54,10 +57,10 @@
         .score {
             width: 100px;
             height: 100px;
-            border-radius: 50%;
-            background-color: rgb(57, 57, 184);
+            border-radius: 100%;
+            background-color: #4d22c9;
             margin: 0 auto;
-            box-shadow: 2px 0px 2px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.2);
             justify-content: center;
             align-items: center;
             padding: 10px;
@@ -108,14 +111,14 @@
         }
 
         .reaction {
-            width: 150px;
+            width: 170px;
             display: inline-flex;
             height: 10px;
             border-radius: 5%;
-            background-color: rgb(240, 201, 201);
+            background-color: #fff6f5;
             margin: 0 auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            justify-content: flex-start;
+            
             justify-content: space-between;
             align-items: center;
             padding: 10px;
@@ -123,11 +126,18 @@
         }
 
         .reaction h2 {
+            display: flex;
+            align-items: center;
             font-size: 15px;
             margin: 0;
             margin: 0;
             padding-top: 3px;
-            color: rgb(121, 4, 4);
+            color: #FF5555;
+        }
+
+        img {
+            height: 15px;
+            margin-right: 5px;
         }
 
         .reaction h3 {
@@ -153,14 +163,13 @@
         }
 
         .memory {
-            width: 150px;
+            width: 170px;
             display: inline-flex;
             height: 10px;
             border-radius: 5%;
-            background-color: #f8f4f0;
+            background-color:  #FFFBF2;
             margin: 0 auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            justify-content: flex-start;
             justify-content: space-between;
             align-items: center;
             padding: 10px;
@@ -172,7 +181,7 @@
             margin: 0;
             margin: 0;
             padding-top: 3px;
-            color: #f3e524;
+            color: #FFB21E;
         }
 
         .memory h3 {
@@ -198,11 +207,11 @@
         }
 
         .verbal {
-            width: 150px;
+            width: 170px;
             display: inline-flex;
             height: 10px;
             border-radius: 5%;
-            background-color: rgb(233, 243, 233);
+            background-color: #F2FBFA;
             margin: 0 auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
             justify-content: flex-start;
@@ -217,7 +226,7 @@
             margin: 0;
             margin: 0;
             padding-top: 3px;
-            color: rgb(6, 214, 117);
+            color: #00BB8F;
         }
 
         .verbal h3 {
@@ -243,11 +252,11 @@
         }
 
         .visual {
-            width: 150px;
+            width: 170px;
             display: inline-flex;
             height: 10px;
             border-radius: 5%;
-            background-color: rgb(225, 229, 248);
+            background-color: #F3F3FD;
             margin: 0 auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
             justify-content: flex-start;
@@ -262,7 +271,7 @@
             margin: 0;
             margin: 0;
             padding-top: 3px;
-            color: rgb(4, 6, 121);
+            color: #1125D6;
         }
 
         .visual h3 {
@@ -291,8 +300,8 @@
             width: 180px;
             height: 40px;
             border-radius: 50px;
-            background-color: rgb(35, 31, 224);
-            border: 0px solid rgb(0, 0, 0);
+            background-color: #6743ff ;
+            border: none;
             margin: 0 auto;
             box-shadow: 0 0 1px rgba(0,0,0,0.2);
             justify-content: center;
@@ -329,28 +338,28 @@
         <div class="card2">
             <h1>Summary</h1>
             <div class="reaction">
-                <h2>Reaction</h2>
+                <h2><img src="./assets/images/icon-reaction.svg" alt="#">Reaction</h2>
                 <div>
                     <h3>80</h3>
                     <h4>/100</h4>
                 </div>
             </div>
             <div class="memory">
-                <h2>Memory</h2>
+                <h2><img src="./assets/images/icon-memory.svg" alt="#">Memory</h2>
                 <div>
                     <h3>92</h3>
                     <h4>/100</h4>
                 </div>
             </div>
             <div class="verbal">
-                <h2>Verbal</h2>
+                <h2><img src="./assets/images/icon-verbal.svg" alt="#">Verbal</h2>
                 <div>
                     <h3>61</h3>
                     <h4>/100</h4>
                 </div>
             </div>
             <div class="visual">
-                <h2>Visual</h2>
+                <h2><img src="./assets/images/icon-visual.svg" alt="#">Visual</h2>
                 <div>
                     <h3>72</h3>
                     <h4>/100</h4>
